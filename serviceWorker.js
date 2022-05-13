@@ -23,7 +23,7 @@ self.addEventListener("install", (installEvent) => {
                 cache.addAll(assets);
             })
             .catch((error) => {
-                alert(error);
+                console.log(error);
             })
     );
 });
