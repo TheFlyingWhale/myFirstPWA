@@ -27,3 +27,9 @@ const showCoffees = () => {
 };
 
 document.addEventListener("DOMContentLoaded", showCoffees);
+
+window.addEventListener("load", () => {
+    navigator.serviceWorker
+        .register("../serviceWorker.js")
+        .catch((e) => console.log("Error registering service worker", e));
+});
